@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
-p {
+p, ul, ol, li {
 	margin: 0;
 }
 
@@ -44,29 +44,67 @@ header a:hover {
 	text-decoration: underline;
 }
 
+#main-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+}
+
 main {
 	display: flex;
-	justify-content: flex-start;
+	flex-direction: column;
 	padding: 2em;
 }
 
-main section {
+main .items {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.item {
 	margin: 1em;
-	padding: 1em;
-	background-color: rgba(0, 0, 0, 0.4);
-	text-align: center;
+	text-align: left;
 	cursor: pointer;
+	outline: 0.25em solid transparent;
+	transition: outline-color 0.25s;
+	padding: 0.5em;
 }
 
-main section:hover {
-	outline: 1px solid black;
+.item:hover, .item:active, .item:focus {
+	outline-color: black;
 }
 
-main section img {
-	height: 5em;
+.item img {
+	height: 15em;
+	margin-bottom: 0.5em;
+}
+
+.item p {
+	text-align: left;
+}
+
+#side-menu ul {
+	position: sticky;
+	top: 2em;
+	display: flex;
+	flex-direction: column;
+	padding-block: 0.5em;
+	padding-right: 1.5em;
+	background-color: black;
+	color: white;
+	font-size: 1.5em;
+}
+
+#side-menu li {
 	margin: 0.5em;
 }
 
-main section p {
-	text-align: left;
+#side-menu a {
+	color: white;
+	text-decoration: none;
+}
+
+#side-menu a:hover, #side-menu a:focus {
+	text-decoration: underline;
 }
