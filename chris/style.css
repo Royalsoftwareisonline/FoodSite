@@ -58,37 +58,31 @@ main {
 
 main .items {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: left;
 	flex-wrap: wrap;
 }
 
-.item {
+.items > * {
 	margin: 1em;
+	padding: 0.5em;
 	text-align: left;
 	cursor: pointer;
 	outline: 0.25em solid transparent;
 	transition: outline-color 0.25s;
-	padding: 0.5em;
 }
 
-.item:hover, .item:active, .item:focus {
+.items > *:hover, .items > *:active, .items > *:focus {
 	outline-color: black;
 }
 
-.item img {
+.items > * img {
 	height: 15em;
 	margin-bottom: 0.5em;
-}
-
-.item p {
-	text-align: left;
 }
 
 #side-menu ul {
 	position: sticky;
 	top: 2em;
-	display: flex;
-	flex-direction: column;
 	padding-block: 0.5em;
 	padding-right: 1.5em;
 	background-color: black;
