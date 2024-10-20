@@ -84,19 +84,6 @@ const cart = {
     }
 };
 
-    /**
-     * Remove product from cart?
-     * @param {String} product Name of product
-     *
-    remove: product => {
-    let count = +localStorage.getItem(product);
-    if (count)
-        localStorage.setItem(product, count - 1);
-    else
-        localStorage.setItem(product, 1);
-    cart.update();
-} */
-
 // run on page load
 cart.update();
 
