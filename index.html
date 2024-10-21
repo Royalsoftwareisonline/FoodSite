@@ -3,9 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title> Parker's Food </title>
+
 	<link rel="stylesheet" href="style.css">
-	<script src="cart.js" defer></script>
+	<link rel="stylesheet" href="home.css">
+
+	<script src="catalog.js" defer></script>
+	<script src="cart-util.js" defer></script>
+	<script src="home.js" defer></script>
 </head>
 <body>
 	<header>
@@ -16,58 +22,33 @@
 		<nav>
 			<div>
 				<a href="index.html">Home</a>
-				<a href="cart.html">Cart <span id="cart-status">(0)</span></a>
-				<a href="request.html">Request</a>
+				<a href="cart">Cart <span id="cart-status">(0)</span></a>
+				<a href="request">Request</a>
 				<a href="#footer">Contact</a>
 				<a href="about.html">About</a>
 			</div>
 		</nav>
 	</header>
-		<div class="sidenav">
-			<a href="#">Breads</a>
-			<a href="#">Cheeses</a>
-			<a href="#">Chili oils</a>
-			<a href="#">Dried sausages</a>
-			<a href="#">Fresh sausages</a>
-			<a href="#">Snacks</a>
-		</div>
-		
-	<main>
-		<figure class= "product">
-			<img src="placeholder.png" alt="">
-			<figcaption>
-				<h4>Sausage</h4>
-			</figcaption>
-			<figcaption>(TODO: description)</figcaption>
-		</figure>
 
-		<figure class= "product">
-			<img src="placeholder.png" alt="">
-			<figcaption>
-				<h4>Cheese</h4>
-			</figcaption>
-			<figcaption>(TODO: description)</figcaption>
-		</figure>
-		
-		<figure class= "product">
-			<img src="placeholder.png" alt="">
-			<figcaption>
-				<h4>Chili oil</h4>
-			</figcaption>
-			<figcaption>(TODO: description)</figcaption>
-		</figure>
-		
-		<figure class= "product">
-			<img src="placeholder.png" alt="">
-			<figcaption>
-				<h4>Bread</h4>
-			</figcaption>
-			<figcaption>(TODO: description)</figcaption>
-		</figure>
-	</main>
+	<div id="main-container">
+		<nav id="side-menu">
+			<!-- TODO: generate menu based on catalog.js -->
+			<ul>
+			<li><a href="#CuredMeats">Cured Meats</a></li> <!--bacon, pancetta, prosciutto, tasso-->
+			<li><a href="#Sausages">Fresh Sausages and Salami</a></li> <!--BBQ, andouille, cotto, teewurst-->
+			<li><a href="#BakedGoods">Baked Goods</a></li> <!--white, wheat, milk, foccacia-->
+			<li><a href="#Cheeses">Cheeses</a></li> <!--ricotta, paneer, mascarpone, blanco-->
+			<li><a href="#Snacks">Snacks and Sides</a></li> <!--classic, rosemary, original, spicy-->
+			</ul>
+		</nav>
+
+		<main>
+			<!-- Javascript (home.js) will generate and insert content from catalog. -->
+		</main>
+	</div>
 	
-	<!-- <footer id="footer">
+	<footer id="footer">
 		TODO: add contact info
-	</footer> -->
+	</footer>
 </body>
 </html>

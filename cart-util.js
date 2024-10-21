@@ -35,7 +35,7 @@ const cart = {
     },
 
     /**
-     * Get the number/count of the given product that is currently in thye cart.
+     * Get the number/count of the given product that is currently in the cart.
      * @param {String} product Product name
      * @returns {Number} A positive number if the product is in the cart. 0 if it's not.
      */
@@ -61,7 +61,7 @@ const cart = {
      * Delete all instances of the given product from the cart.
      * @param {String} product 
      */
-    removeAll: product => {
+    remove: product => {
         localStorage.removeItem(product);
         cart.update();
     },
@@ -86,19 +86,3 @@ const cart = {
 
 // run on page load
 cart.update();
-
-// run the following code on page load
-document.querySelectorAll(".items > *").forEach(item => {
-    // add tab-indexes to all items
-    item.tabIndex = 0;
-
-    // add click (event) listener for each item so they get added to the cart onclick
-    let itemName = item.querySelector("h3")?.innerText;  // try to get itemName
-    item.addEventListener("click", event => {
-        if (!itemName) {  // is itemName falsey (e.g., null, or "")
-            alert("Code error. No <h3> (or empty <h3>) for this item. Item not added to cart.");
-            return;  // stop further code from running becasue an error occured
-        }
-        cart.add(itemName);
-    });
-});
