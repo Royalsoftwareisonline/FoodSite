@@ -82,7 +82,7 @@ main .items {
 
 #side-menu ul {
 	position: sticky;
-	top: 2em;
+	top: 5em;
 	padding-block: 0.5em;
 	padding-right: 1.5em;
 	background-color: black;
