@@ -17,7 +17,7 @@ const catalog = [
 			},
 			{
 				img_src: "placeholder.png",
-				name: "Proscuitto",
+				name: "Prosciutto",
 				desc: "(TODO: description)",
 				price: 10_00
 			},

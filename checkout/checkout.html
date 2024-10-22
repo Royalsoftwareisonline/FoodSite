@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Checkout </title>
+    
+	<link rel="stylesheet" href="#">
+	<link rel="stylesheet" href="#">
+</head>
+<body>
+    <header>
+		<form action="">
+			<input type="text" placeholder="Search for a product...">
+		</form>
+		<h1> Parker's Food </h1>
+		<nav>
+			<div>
+				<a href="../">Home</a>
+				<a href="../cart">Cart <span id="cart-status">(0)</span></a>
+				<a href="../request">Request</a>
+				<a href="#footer">Contact</a>
+				<a href="../about.html">About</a>
+			</div>
+		</nav>
+	</header>
+
+    <main>
+        <h1>Checkout</h1>
+		<h2>Delivery/Pickup</h2>
+        <form action="#">
+			<input type="radio" id="delivery" name="delivery/pickup" value="delivery"> 
+			<label for="delivery">delivery</label> <br>
+			<input type="radio" id="pickup" name="delivery/pickup" value="pickup">
+			<label for="delivery">pickup</label> <br>
+			<input type="submit" value="submit">
+		</form>
+		<h2>Contact Information</h2>
+		<form action="#">
+			<label for="fname">First name:</label>
+			<input type="text" id="fname" name="fname"><br><br>
+			<label for="lname">Last name:</label>
+			<input type="text" id="lname" name="lname"><br><br>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email"><br><br>
+			<label for="phone">Phone Number:</label>
+			<input type="tel" id="phone" name="phone">
+
+
+
+		</form>
+       
+    </main>
+
+    <footer id="footer">
+		TODO: add contact info
+	</footer>
+</body>
+</html>
