@@ -33,7 +33,7 @@
 			<label for="delivery">delivery</label> <br>
 			<input type="radio" id="pickup" name="delivery/pickup" value="pickup">
 			<label for="delivery">pickup</label> <br>
-			<input type="submit" value="submit">
+
 		</form>
 		<h2>Contact Information</h2>
 		<form action="#">
@@ -44,11 +44,78 @@
 			<label for="email">Email:</label>
 			<input type="email" id="email" name="email"><br><br>
 			<label for="phone">Phone Number:</label>
-			<input type="tel" id="phone" name="phone">
-
-
-
+			<input type="tel" id="phone" name="phone"><br><br>
+			<label for="building">Building (for delivery):</label>
+			<input type="text" id="building" name="building"><br><br>
+			<label for="room">Room Number:</label>
+			<input type="text" id="room" name="room"><br><br>
+			<input type="submit" value="submit">
 		</form>
+
+
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			
+			<!-- Hidden PayPal fields -->
+			<input type="hidden" name="cmd" value="_xclick" />
+			<input type="hidden" name="business" value="peboyles05@gmail.com" />
+			<input type="hidden" name="item_name" value="cart items" />
+			<input type="hidden" name="amount" value="#total-price" />
+			<input type="hidden" name="no_shipping" value="1" />
+			<input type="hidden" name="no_note" value="1" />
+			<input type="hidden" name="currency_code" value="USD" />
+			<input type="hidden" name="lc" value="US" />
+			<input type="hidden" name="return" value="#" />
+			<input type="hidden" name="return_cancel" value="#" />
+
+
+				<!-- Visible form information -->
+				<div class="widebox2 wow slideInUp box">
+					<fieldset> <!-- Checkout -->
+						
+						<legend> Checkout </legend>
+	
+												<div class="form_ele" style="text-align:center;">
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit"
+									   alt="PayPal - The safer, easier way to pay online!" style="border-width:0px; display:inline-block;" />
+							</div>
+											
+						<div class="form_ele"> <!-- submit -->
+							<label for="payment_method" class="form_ele_left"> Payment Method: </label>
+							<div class="form_ele_right">
+								<select disabled="disabled">
+									<option> Pay Later by Check </option>
+									<option selected="selected"> Pay Now via PayPal </option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="form_ele"> <!-- price -->
+							<div class="form_ele_left" style="font-weight:bold;"> Total: </div>
+							<div id="price_text" class="form_ele_right money" style="font-weight:900;"> $<span id="total-price">0</span></div>
+						</div>
+	
+						<div class="form_ele"> <!-- other_info -->
+							<label for="other_info" class="form_ele_left" style="vertical-align:top;"> Any special requests or questions? </label>
+							<div class="form_ele_right"> <textarea style="width:100%;" rows="6" disabled="disabled"></textarea> </div>
+						</div>
+
+						<div class="form_ele"> <!-- parent_name -->
+							<label for="parent_name" class="form_ele_left">Full Name: </label>
+							<div class="form_ele_right"> <input type="text" value="" style="width:75%;" disabled="disabled" /> </div>
+						</div>
+
+						<div class="form_ele"> <!-- phone -->
+							<label for="phone" class="form_ele_left"> Phone Number: </label>
+							<div class="form_ele_right"> <input value="" style="width:50%;" disabled="disabled" /> </div>
+						</div>
+						
+						<div class="form_ele"> <!-- email  -->
+							<label for="email" class="form_ele_left"> E-mail: </label>
+							<div class="form_ele_right"> <input type="text" value="" style="width:75%;" disabled="disabled" /> </div>
+						</div>
+						
+					</fieldset>
+				</div>
        
     </main>
 

@@ -40,17 +40,22 @@ for (let section of catalog) {
 }
 
 // add both event listeners for adding items to cart, and also tabIndex
+let product_ele = document.querySelectorAll(".items > *");
 document.querySelectorAll(".items > *").forEach(item => {
     // add tab-indexes to all items
     item.tabIndex = 0;
+    product_ele.addEventListener("click", event => {
+    // let product_frame = document.createElement("IFRAME")
+    product_ele.setAttribute("src", "https://www.w3schools.com") 
+    });
 
     // add click (event) listener for each item so they get added to the cart onclick
-    let itemName = item.querySelector("h3")?.innerText;  // try to get itemName
-    item.addEventListener("click", event => {
-        if (!itemName) {  // is itemName falsey (e.g., null, or "")
-            alert("Code error. No <h3> (or empty <h3>) for this item. Item not added to cart.");
-            return;  // stop further code from running becasue an error occured
-        }
-        cart.add(itemName);
-    });
-});
+ //   let itemName = item.querySelector("h3")?.innerText;  // try to get itemName
+ //   item.addEventListener("click", event => {
+ //       if (!itemName) {  // is itemName falsey (e.g., null, or "")
+ //           alert("Code error. No <h3> (or empty <h3>) for this item. Item not added to cart.");
+ //           return;  // stop further code from running becasue an error occured
+ //       }
+ //        cart.add(itemName);
+ //   });
+ });
