@@ -44,19 +44,36 @@ let product_ele = document.querySelectorAll(".items > *");
 document.querySelectorAll(".items > *").forEach(item => {
     // add tab-indexes to all items
     item.tabIndex = 0;
- //   product_ele.addEventListener("click", event => {
-    // let product_frame = document.createElement("IFRAME")
- //   product_ele.setAttribute("src", "https://www.w3schools.com") 
-  //  });
 
     // add click (event) listener for each item so they get added to the cart onclick
     let itemName = item.querySelector("h3")?.innerText;  // try to get itemName
     item.addEventListener("click", event => {
-
+        
        if (!itemName) {  // is itemName falsey (e.g., null, or "")
             alert("Code error. No <h3> (or empty <h3>) for this item. Item not added to cart.");
            return;  // stop further code from running becasue an error occured
         }
-         cart.add(itemName);
+        // cart.add(itemName);
+
+        // iframe code
+
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://example.com'; // Change this URL as needed
+        iframe.width = '100%';
+        iframe.height = '90%';
+        iframe.style.border = 'none';
+    
+         // Clear any existing content in the popup window (if needed)
+         popupWindow.innerHTML = '<span id="closePopup">&times;</span>';
+    
+         // Append the iframe to the pop-up window
+         popupWindow.appendChild(iframe);
+    
+         // Show the pop-up and overlay
+         overlay.style.display = 'block';
+         popupWindow.style.display = 'block';
+    
+         // Add event listener to close button
+         document.getElementById('closePopup').addEventListener('click', closePopupWindow);
     });
   });

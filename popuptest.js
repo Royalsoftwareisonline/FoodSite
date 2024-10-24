@@ -1,18 +1,10 @@
  // Get references to DOM elements
- const openPopup = document.querySelectorAll(".items > *");
+ //const openPopup = document.getElementById('CuredMeats');
+ //const openPopup2 = document.getElementById('BakedGoods');
  const popupWindow = document.getElementById('popupWindow');
  const overlay = document.getElementById('overlay');
  const closePopup = document.getElementById('closePopup');
-
- // Function to open the pop-up and create the iframe
- CuredMeats.addEventListener('click', function() {
-     // Create iframe dynamically
-     const iframe = document.createElement('iframe');
-     iframe.src = 'https://example.com'; // Change this URL as needed
-     iframe.width = '100%';
-     iframe.height = '90%';
-     iframe.style.border = 'none';
-
+ 
      // Clear any existing content in the popup window (if needed)
      popupWindow.innerHTML = '<span id="closePopup">&times;</span>';
 
@@ -25,7 +17,7 @@
 
      // Add event listener to close button
      document.getElementById('closePopup').addEventListener('click', closePopupWindow);
- });
+ 
 
  // Function to close the pop-up window
  function closePopupWindow() {
