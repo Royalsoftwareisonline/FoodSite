@@ -1,5 +1,5 @@
  // Get references to DOM elements
- const CuredMeats = document.getElementById('CuredMeats');
+ const openPopup = document.querySelectorAll(".items > *");
  const popupWindow = document.getElementById('popupWindow');
  const overlay = document.getElementById('overlay');
  const closePopup = document.getElementById('closePopup');

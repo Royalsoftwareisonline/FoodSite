@@ -8,11 +8,12 @@
 
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="popuptest.css">
 
 	<script src="catalog.js" defer></script>
 	<script src="cart-util.js" defer></script>
 	<script src="home.js" defer></script>
-	<!-- <script src="popuptest.js" defer></script> -->
+	<script src="popuptest.js" defer></script>
 </head>
 <body>
 	<header>
@@ -46,6 +47,13 @@
 		<main>
 			<!-- Javascript (home.js) will generate and insert content from catalog. -->
 			
+			  <!-- Pop-up window structure (created dynamically) -->
+			  <div id="overlay"></div>
+			  <div id="popupWindow">
+				  <span id="closePopup">&times;</span>
+				  <!-- The iframe will be dynamically added here -->
+			  </div>
+
 			 </div>
 		</main>
 	</div>
