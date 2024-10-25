@@ -75,5 +75,6 @@ document.querySelectorAll(".items > *").forEach(item => {
     
          // Add event listener to close button
          document.getElementById('closePopup').addEventListener('click', closePopupWindow);
+
+         });
     });
-  });
