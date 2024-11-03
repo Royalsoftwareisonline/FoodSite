@@ -44,16 +44,30 @@ for (let section of catalog) {
 
 			// update dialog content
 			// \$ is an escape sequence for adding a dollar sign into a string template
-			dialog.querySelector("p").innerText = `${item.name}: ${item.desc} \$${item.price}`;
+			dialog.querySelector("h1").innerText = `${item.name}:`;
+			dialog.querySelector("img").src = `${item.img_src}`;
+			dialog.querySelector("p").innerText = `${item.desc} \$${item.price}`;
+			//const button = document.getElementById("button")
+			button.addEventListener("click", event => {cart.add(item.name);});
+			document.getElementById("closeWindow").addEventListener("click", event => {
+				alert("edijehdihej");
+			});
 
-			// show model
+
+			
+			// show modal
 			dialog.showModal();
+
+			//close window function
+			function closeWindow () {
+				event.stopPropagation(); 
+			}
 
 			// DEBUG: remove and replace with actual close button
 			dialog.addEventListener("click", event => {
 				event.stopPropagation();  // ??? not working
-				cart.add(item.name);  // not like this
-				dialog.close();
+				//cart.add(item.name);  // not like this
+				//dialog.close();
 			});
 		});
 	}

@@ -57,3 +57,8 @@ main .items {
 #side-menu a:hover, #side-menu a:focus {
 	text-decoration: underline;
 }
+
+dialog {
+	height: 500px;
+	width: 600px;
+}
