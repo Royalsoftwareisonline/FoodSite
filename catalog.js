@@ -1,3 +1,4 @@
+//
 const catalog = [
 	{
 		section_heading: "Cured Meats",
@@ -17,7 +18,7 @@ const catalog = [
 			},
 			{
 				img_src: "placeholder.png",
-				name: "Prosciutto",
+				name: "Pastirma",
 				desc: "(TODO: description)",
 				price: 10_00
 			},
@@ -47,7 +48,7 @@ const catalog = [
 			},
 			{
 				img_src: "placeholder.png",
-				name: "Salami Cotto",
+				name: "Summer Sausage",
 				desc: "(TODO: description)",
 				price: 10_00
 			},
