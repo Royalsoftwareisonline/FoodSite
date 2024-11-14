@@ -1,4 +1,3 @@
-//
 const cart = {
     /**
      * Update GUI to reflect current cart status
