@@ -35,8 +35,42 @@ document.querySelector("input[name=method][value=pickup]").addEventListener("cha
 	bldg.classList.add("hide");
 });
 
-document.querySelector("form#checkout").addEventListener("submit", event => {
-	// TODO: do form validation maybe
+document.querySelector("form#checkout").addEventListener("submit", event =>{
 
-	alert("Testing");  // TODO: write JS to send email with form info here
-});
+// TODO: do form validation maybe
+
+	//alert("Testing");  // TODO: write JS to send email with form info here
+
+	//Test code
+
+	 //function formSubmit() {
+
+		 //make variable that gets form data from each part of form via event.target
+		const formData = new FormData(event.target);
+
+		//Object that stores form data
+		const formDataObj = {
+			name: formData.get("name"),
+			email: formData.get("email"),
+			phone: formData.get("phone"),
+			method: formData.get("method"),
+			building: formData.get("building"),
+			room: formData.get("room"),
+			comment: formData.get("comment"),
+		};
+
+		//XMLHttpRequest that sets request header content type to json and allows to be accepted
+		//converts form data to json and sends via XMLHttpRequest
+		const xhttp = new XMLHttpRequest(); 
+
+		xhttp.open("POST", "https://formsubmit.co/ajax/peboyles05@gmail.com");
+		xhttp.setRequestHeader("Content-Type", "application/json");
+		xhttp.setRequestHeader("Accept", "application/json");
+		xhttp.send(JSON.stringify(formDataObj));
+
+		xhttp.onreadystatechange = () => {
+			if (xhttp.readyState === 4 && xhttp.status === 200);
+				alert("Form submitted successfully");
+		} 
+	});
+	
