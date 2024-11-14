@@ -30,15 +30,47 @@
 	</header>
 
     <main>
-        <h2>Items in Cart</h2>
-        <div id="items">
-			<!-- Javascript (cart.js) will generate and insert items here. -->
+		<div>
+			<h2>Items in Cart</h2>
+			<div id="items">
+				<!-- Javascript (cart.js) will generate and insert items here. -->
+			</div>
+			<h3>Total: $<span id="total-price">0</span></h3>
+			<button id="clear-cart"> Clear Cart </button>
 		</div>
-        <h3>Total: $<span id="total-price">0</span></h3>
-        <button id="checkout"> Checkout </button>
-		<button id="clear-cart"> Clear Cart </button>
-       
-    </main>
+
+		<form id="checkout" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<label>Full Name: <input name="name" type="text" required></label>
+			<label>Email: <input name="email" type="email" required></label>
+			<label>Phone: <input name="phone" type="tel" required></label>
+			<label>Pickup: <input name="method" value="pickup" type="radio"></label>
+			<label>Delivery: <input name="method" value="delivery" type="radio" checked></label>
+			<div id="bldg">
+				<label>Building: <input name="building" type="text"></label>
+				<label>Room Number: <input name="room" type="text"></label>
+			</div>
+			<label>
+				<h3>Questions or comments:</h3>
+				<textarea name="comment"></textarea>
+			</label>
+
+			<!-- Hidden PayPal fields -->
+			<input type="hidden" name="cmd" value="_xclick" />
+			<input type="hidden" name="business" value="peboyles05@gmail.com" />
+			<input type="hidden" name="item_name" value="Food Site Cart" />
+			<!-- <input type="hidden" name="item_number" value="0" /> -->
+			<input type="hidden" name="amount" value="0.00" id="amount" />
+			<!-- <input type="hidden" name="discount_amount" value="0.00" /> -->
+			<input type="hidden" name="no_shipping" value="1" />
+			<input type="hidden" name="no_note" value="1" />
+			<input type="hidden" name="currency_code" value="USD" />
+			<input type="hidden" name="lc" value="US" />
+			<input type="hidden" name="return" value="http://example.com" />         <!-- TODO: update -->
+			<input type="hidden" name="return_cancel" value="http://example.com" />  <!-- TODO: update -->
+
+			<input type="submit" value="Checkout">
+		</form>
+	</main>
 
     <footer id="footer">
 		TODO: add contact info

@@ -1,0 +1,12 @@
+.hide {
+	display: none;
+}
+
+main {
+	display: flex;
+	justify-content: space-between;
+}
+
+form label {
+	display: block;
+}

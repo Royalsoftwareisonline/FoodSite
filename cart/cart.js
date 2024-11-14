@@ -16,6 +16,7 @@ for (let product of cart.products()) {
 
 // update price
 document.querySelector("#total-price").innerHTML = `${total_price/100}`;
+document.querySelector("#amount").value = total_price / 100;
 
 // event listeners
 document.querySelector("#clear-cart").addEventListener("click", event => {
@@ -24,4 +25,18 @@ document.querySelector("#clear-cart").addEventListener("click", event => {
 	// TODO: or refreash page??
 	items_ele.innerText = "";
 	document.querySelector("#total-price").innerHTML = "0";
+});
+
+let bldg = document.querySelector("#bldg");
+document.querySelector("input[name=method][value=delivery]").addEventListener("change", event => {
+	bldg.classList.remove("hide");
+});
+document.querySelector("input[name=method][value=pickup]").addEventListener("change", event => {
+	bldg.classList.add("hide");
+});
+
+document.querySelector("form#checkout").addEventListener("submit", event => {
+	// TODO: do form validation maybe
+
+	alert("Testing");  // TODO: write JS to send email with form info here
 });

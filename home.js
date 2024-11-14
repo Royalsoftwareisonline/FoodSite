@@ -3,6 +3,33 @@
 // generates HTML for catalog
 let main_ele = document.querySelector("main");
 
+let dialog = document.querySelector("dialog");
+let item_shown = null;
+
+const show_dialog = item => {
+	// update dialog content
+	// \$ is an escape sequence for adding a dollar sign into a string template
+	dialog.querySelector("p").innerText = `${item.name}: ${item.desc} \$${item.price}`;
+
+	// show model
+	item_shown = item;
+	dialog.showModal();
+};
+
+const close_dialog = () => {
+	item_shown = null;
+	dialog.close();
+};
+
+dialog.querySelector("#buy").addEventListener("click", event => {
+	cart.add(item_shown.name);
+	close_dialog();
+});
+
+dialog.querySelector("#close").addEventListener("click", event => {
+	close_dialog();
+});
+
 for (let section of catalog) {
 	
 	let section_ele = document.createElement("section");  // <section> </section>
@@ -39,22 +66,6 @@ for (let section of catalog) {
 		items_ele.append(item_ele);                       // <div class="items"> ... <div>...</div> </div> 
 		
 		// pop-up
-		item_ele.addEventListener("click", event => {
-			let dialog = document.querySelector("dialog");
-
-			// update dialog content
-			// \$ is an escape sequence for adding a dollar sign into a string template
-			dialog.querySelector("p").innerText = `${item.name}: ${item.desc} \$${item.price}`;
-
-			// show model
-			dialog.showModal();
-
-			// DEBUG: remove and replace with actual close button
-			dialog.addEventListener("click", event => {
-				event.stopPropagation();  // ??? not working
-				cart.add(item.name);  // not like this
-				dialog.close();
-			});
-		});
+		item_ele.addEventListener("click", event => show_dialog(item));
 	}
 }
