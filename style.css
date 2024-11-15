@@ -15,12 +15,13 @@ p, ul, ol, li {
 }
 
 header, footer {
-	background-color: rgb(75, 8, 8);
+	background-color: rgba(111,27,26,255);
 	color: white;
 	text-align: center;
 	padding: 1em 2em;
 	display: flex;
 	justify-content: space-between;
+	vertical-align: middle;
 }
 
 header form, header nav {
