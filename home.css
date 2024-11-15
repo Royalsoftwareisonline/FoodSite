@@ -17,16 +17,18 @@ main .items {
 }
 
 .items > * {
-	margin: 1em;
+	margin: 0.5em;
 	padding: 0.5em;
 	text-align: left;
 	cursor: pointer;
-	outline: 0.25em solid transparent;
-	transition: outline-color 0.25s;
+	outline: 0.15em solid transparent;
+	outline-color: rgb(139, 131, 131);
 }
 
 .items > *:hover, .items > *:active, .items > *:focus {
-	outline-color: black;
+	background-color: rgba(200, 200, 200, 0.3);
+	transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .items > * img {
@@ -39,7 +41,7 @@ main .items {
 	top: 5em;
 	padding-block: 0.5em;
 	padding-right: 1.5em;
-	background-color: black;
+	background-color: rgb(75, 72, 72);
 	color: white;
 	font-size: 1.5em;
 }
@@ -58,11 +60,19 @@ main .items {
 }
 
 dialog {
-    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
     padding: 25px;
     border-radius: 8px;
     width: 500px;
     max-height: 85vh;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 dialog img {
@@ -113,4 +123,9 @@ dialog #add-to-cart {
 
 dialog #add-to-cart:hover {
     background-color: #45a049;
+}
+
+footer {
+    font-size: 18px;
+    text-align: center;
 }

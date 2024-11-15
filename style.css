@@ -15,7 +15,7 @@ p, ul, ol, li {
 }
 
 header, footer {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgb(75, 8, 8);
 	color: white;
 	text-align: center;
 	padding: 1em 2em;
