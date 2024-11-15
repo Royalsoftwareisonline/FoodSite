@@ -9,7 +9,10 @@ let item_shown = null;
 const show_dialog = item => {
 	// update dialog content
 	// \$ is an escape sequence for adding a dollar sign into a string template
-	dialog.querySelector("p").innerText = `${item.name}: ${item.desc} \$${item.price}`;
+	dialog.querySelector("p").innerText = `${item.desc}`;
+	dialog.querySelector("img").src = `${item.img_src}`;
+	dialog.querySelector("h3").innerText = `${item.name}`;
+	dialog.querySelector("#add-to-cart").innerText = `Add To Cart - \$${item.price}`;
 
 	// show model
 	item_shown = item;
@@ -21,14 +24,15 @@ const close_dialog = () => {
 	dialog.close();
 };
 
-dialog.querySelector("#buy").addEventListener("click", event => {
+//dialog.querySelector("#buy").addEventListener("click", event => {
+dialog.querySelector(".close-btn").addEventListener("click", close_dialog);
+dialog.querySelector("#add-to-cart").addEventListener("click", () => {
 	cart.add(item_shown.name);
-	close_dialog();
 });
 
-dialog.querySelector("#close").addEventListener("click", event => {
+/* dialog.querySelector("#close").addEventListener("click", event => {
 	close_dialog();
-});
+}); */
 
 for (let section of catalog) {
 	

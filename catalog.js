@@ -17,7 +17,7 @@ const catalog = [
 			},
 			{
 				img_src: "placeholder.png",
-				name: "Prosciutto",
+				name: "Pastirma",
 				desc: "(TODO: description)",
 				price: 10_00
 			},
@@ -95,7 +95,7 @@ const catalog = [
 		items: [
 			{
 				img_src: "placeholder.png",
-				name: "Ricotta of the Week",
+				name: "Red Wine Ricotta",
 				desc: "(TODO: description)",
 				price: 10_00
 			},
