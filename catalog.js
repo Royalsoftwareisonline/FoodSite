@@ -164,19 +164,19 @@ const catalog = [
 				img_src: "placeholder.png",
 				name: "Pork Roll Monte Cristo",
 				desc: "A breakfast sandwich inspired twist on the pork roll egg and cheese, this sandwich has egg-dipped bread, caramelized pork roll, tamagoyaki (Japanese rolled omelete), cheddar cheese and maple chili hot sauce. Will be prepared fresh.",
-				price: 8.00
+				price: 13.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Frito Pie",
-				desc: "Popular in the Southeast and Southwest, Frito pie is simply Fritos, chili, and cheese. Simple and delicious. Will be prepared fresh.",
-				price: 3.00
+				desc: "Popular in the Southeast and Southwest, Frito pie is just Fritos, chili, and cheese. Simple and delicious. Will be prepared fresh.",
+				price: 6.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Spam Katsu-Sando",
 				desc: "A twist on a Japanese sandwich, the Spam Katsu-Sando has thinly cut, breaded and fried Spam, with roasted cabbage and tonkatsu sauce. Will be prepared fresh.",
-				price: 8.00
+				price: 12.00
 			},
 		]
 	},

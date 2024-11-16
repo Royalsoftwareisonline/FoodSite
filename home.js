@@ -6,6 +6,8 @@ let main_ele = document.querySelector("main");
 let dialog = document.querySelector("dialog");
 let item_shown = null;
 
+let currentQty = 1;
+
 const show_dialog = item => {
 	// update dialog content
 	// \$ is an escape sequence for adding a dollar sign into a string template
@@ -26,6 +28,13 @@ const show_dialog = item => {
 	
 	item_shown = item;
 	dialog.showModal();
+	
+	// Reset quantity to 1 when dialog opens
+	currentQty = 1;
+	dialog.querySelector('.qty-display').textContent = currentQty;
+	
+	// Update price display
+	updateAddToCartButton(item.price);
 };
 
 const close_dialog = () => {
@@ -36,7 +45,13 @@ const close_dialog = () => {
 //dialog.querySelector("#buy").addEventListener("click", event => {
 dialog.querySelector(".close-btn").addEventListener("click", close_dialog);
 dialog.querySelector("#add-to-cart").addEventListener("click", () => {
-	cart.add(item_shown.name);
+	if (item_shown.available !== false) {
+		// Add the item multiple times based on quantity
+		for (let i = 0; i < currentQty; i++) {
+			cart.add(item_shown.name);
+		}
+		//close_dialog();
+	}
 });
 
 /* dialog.querySelector("#close").addEventListener("click", event => {
@@ -81,4 +96,23 @@ for (let section of catalog) {
 		// pop-up
 		item_ele.addEventListener("click", event => show_dialog(item));
 	}
+}
+
+dialog.querySelector('.minus').addEventListener('click', () => {
+	if (currentQty > 1) {
+		currentQty--;
+		dialog.querySelector('.qty-display').textContent = currentQty;
+		updateAddToCartButton(item_shown.price);
+	}
+});
+
+dialog.querySelector('.plus').addEventListener('click', () => {
+	currentQty++;
+	dialog.querySelector('.qty-display').textContent = currentQty;
+	updateAddToCartButton(item_shown.price);
+});
+
+function updateAddToCartButton(price) {
+	const totalPrice = (price * currentQty).toFixed(2);
+	dialog.querySelector("#add-to-cart").innerText = `Add To Cart - \$${totalPrice}`;
 }
