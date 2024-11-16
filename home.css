@@ -185,7 +185,7 @@ footer {
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-    /* Header adjustments */
+    /* Header */
     header {
         position: sticky;
         top: 0;
@@ -193,23 +193,22 @@ footer {
         padding: 15px;
         margin: 0;
         border-bottom: none;
+        background-color: white;
     }
     
-    header h1 {
-        font-size: 24px;
+    /* Main container */
+    #main-container {
+        display: flex;
+        flex-direction: column;
         margin: 0;
         padding: 0;
+        gap: 0;  /* Remove any gap */
     }
     
-    /* Main container layout */
-    #main-container {
-        flex-direction: column;
-    }
-    
-    /* Side menu adjustments */
+    /* Side menu */
     #side-menu {
         position: sticky;
-        top: 0;
+        top: 54px;  /* Adjust this value to match your header height */
         width: 100%;
         background-color: rgba(118,110,85,255);
         z-index: 1000;
@@ -226,40 +225,21 @@ footer {
         padding: 12px 15px;
         position: relative;
         gap: 20px;
+        margin: 0;
         scrollbar-width: none;
         -ms-overflow-style: none;
         list-style: none;
     }
     
-    #side-menu ul::-webkit-scrollbar {
-        display: none;
-    }
-    
-    #side-menu li {
-        margin: 0;
-        flex: 0 0 auto;
-    }
-    
-    /* Main content adjustments */
+    /* Main content */
     main {
-        width: 100%;
-        padding: 15px;
+        margin-top: 0;  /* Remove top margin */
+        padding-top: 15px;
     }
     
-    /* Items grid adjustments */
-    .items-container {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 15px;
-        padding: 10px;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 95%;
-    }
-    
-    /* Footer adjustments */
-    #footer {
-        padding: 15px;
-        font-size: 14px;
+    /* Category headers */
+    main h2:first-child {
+        margin-top: 15px;  /* Add some space after the menu */
     }
 }
 
