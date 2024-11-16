@@ -187,11 +187,18 @@ footer {
 @media screen and (max-width: 768px) {
     /* Header adjustments */
     header {
-        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 1001;
+        padding: 15px;
+        margin: 0;
+        border-bottom: none;
     }
     
     header h1 {
         font-size: 24px;
+        margin: 0;
+        padding: 0;
     }
     
     /* Main container layout */
@@ -205,43 +212,48 @@ footer {
         top: 0;
         width: 100%;
         background-color: rgba(118,110,85,255);
-        z-index: 1000; /* Ensure it stays above other content */
+        z-index: 1000;
+        margin: 0;
+        padding: 0;
     }
     
     #side-menu ul {
         display: flex;
-        flex-wrap: nowrap; /* Prevent wrapping */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Keep items on single line */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-        padding: 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding: 12px 15px;
         position: relative;
-        gap: 15px;
-        scrollbar-width: none; /* Hide scrollbar for Firefox */
-        -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+        gap: 20px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        list-style: none;
     }
     
-    /* Hide scrollbar for Chrome/Safari */
     #side-menu ul::-webkit-scrollbar {
         display: none;
     }
     
     #side-menu li {
         margin: 0;
-        flex: 0 0 auto; /* Prevent items from shrinking */
+        flex: 0 0 auto;
     }
     
     /* Main content adjustments */
     main {
         width: 100%;
-        padding: 10px;
+        padding: 15px;
     }
     
     /* Items grid adjustments */
     .items-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 15px;
         padding: 10px;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 95%;
     }
     
     /* Footer adjustments */
