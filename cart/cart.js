@@ -10,13 +10,18 @@ for (let product of cart.products()) {
 	let price = item_info.price * quantity;
 	total_price += price;
 	
-	items_ele.append(`\$${price/100} ${product} x${quantity}`);
+	items_ele.append(`\$${price} ${product} x${quantity}`);
+	//price.innerText = `$${(item.price / 100).toFixed(2)}`;
 	items_ele.append(document.createElement("br"));
+	
+	// Add this line to update the hidden field
+	document.querySelector('input[name="item_name"]').value = `${product} (${quantity})`;
 }
 
 // update price
-document.querySelector("#total-price").innerHTML = `${total_price/100}`;
-document.querySelector("#amount").value = total_price / 100;
+document.querySelector("#total-price").innerHTML = `${total_price}`;
+//document.getElementById("total-price").innerText = (total / 100).toFixed(2); 
+document.querySelector("#amount").value = total_price;
 
 // event listeners
 document.querySelector("#clear-cart").addEventListener("click", event => {
@@ -57,6 +62,7 @@ document.querySelector("form#checkout").addEventListener("submit", event =>{
 			building: formData.get("building"),
 			room: formData.get("room"),
 			comment: formData.get("comment"),
+			item_name: formData.get("item_name"),
 		};
 
 		//XMLHttpRequest that sets request header content type to json and allows to be accepted
@@ -73,4 +79,28 @@ document.querySelector("form#checkout").addEventListener("submit", event =>{
 				alert("Form submitted successfully");
 		} 
 	});
+
+// Add this event listener for the radio buttons
+document.querySelectorAll('input[name="method"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        const bldgDiv = document.getElementById('bldg');
+        const pickupText = document.getElementById('pickup-location') || createPickupText();
+        
+        if (this.value === 'pickup') {
+            bldgDiv.style.display = 'none';
+            pickupText.style.display = 'block';
+        } else {
+            bldgDiv.style.display = 'grid';
+            pickupText.style.display = 'none';
+        }
+    });
+});
+
+function createPickupText() {
+    const pickupText = document.createElement('p');
+    pickupText.id = 'pickup-location';
+    pickupText.innerText = 'Pickup location: McDowell 208';
+    document.getElementById('bldg').after(pickupText);
+    return pickupText;
+}
 	

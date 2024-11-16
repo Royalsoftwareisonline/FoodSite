@@ -14,66 +14,104 @@
 </head>
 <body>
     <header>
-		<form action="">
+		<!--<form action="">
 			<input type="text" placeholder="Search for a product...">
-		</form>
-		<h1> Parker's Food </h1>
+		</form>-->
+		<h1> Website </h1>
 		<nav>
 			<div>
-				<a href="../">Home</a>
-				<a href="../cart">Cart <span id="cart-status">(0)</span></a>
-				<a href="../request">Request</a>
+				<a href="../index.html">Home</a>
+				<a href="cart.html">Cart <span id="cart-status">(0)</span></a>
+				<!--<a href="../request">Request</a>-->
 				<a href="#footer">Contact</a>
-				<a href="../about.html">About</a>
+				<!--<a href="../about.html">About</a>-->
 			</div>
 		</nav>
 	</header>
 
     <main>
-		<div>
-			<h2>Items in Cart</h2>
-			<div id="items">
-				<!-- Javascript (cart.js) will generate and insert items here. -->
+        <!-- Cart Section -->
+        <section class="cart-items">
+            <h2>Items in Cart</h2>
+            <div id="items">
+                <!-- Cart items will be inserted here by JavaScript -->
+            </div>
+            <div class="cart-summary">
+                <h3>Total: $<span id="total-price">0</span></h3>
+                <button id="clear-cart">Clear Cart</button>
+            </div>
+        </section>
+
+        <!-- Checkout Form -->
+        <form id="checkout" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <h2>Checkout Information</h2>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <input name="name" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input name="email" type="email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Phone:</label>
+                <input name="phone" type="tel" required>
+            </div>
+
+            <div class="delivery-options">
+                <div class="radio-group">
+                    <label><input name="method" value="pickup" type="radio"> Pickup</label>
+                    <label><input name="method" value="delivery" type="radio" checked> Delivery</label>
+                </div>
+                <span class="delivery-note">(Phone or email will be used to give you delivery updates. Delivery time may vary by product)</span>
+            </div>
+
+            <div id="bldg">
+                <div class="form-group">
+                    <label>Building:</label>
+                    <input name="building" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Room Number:</label>
+                    <input name="room" type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Special Instructions:</label>
+                <textarea name="comment"></textarea>
+            </div>
+
+			<div>
+				<!-- <label>item_name</label> -->
+				<input type="hidden" name="item_name">
 			</div>
-			<h3>Total: $<span id="total-price">0</span></h3>
-			<button id="clear-cart"> Clear Cart </button>
-		</div>
 
-		<form id="checkout" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-			<label>Full Name: <input name="name" type="text" required></label>
-			<label>Email: <input name="email" type="email" required></label>
-			<label>Phone: <input name="phone" type="tel" required></label>
-			<label>Pickup: <input name="method" value="pickup" type="radio"></label>
-			<label>Delivery: <input name="method" value="delivery" type="radio" checked></label>
-			<div id="bldg">
-				<label>Building: <input name="building" type="text"></label>
-				<label>Room Number: <input name="room" type="text"></label>
-			</div>
-			<label>
-				<h3>Questions or comments:</h3>
-				<textarea name="comment"></textarea>
-			</label>
+            <!-- Hidden PayPal fields -->
+            <input type="hidden" name="cmd" value="_xclick" />
+            <input type="hidden" name="business" value="peboyles05@gmail.com" />
+            <input type="hidden" name="item_name" value="Food Site Cart" />
+            <!-- <input type="hidden" name="item_number" value="0" /> -->
+            <input type="hidden" name="amount" value="0.00" id="amount" />
+            <!-- <input type="hidden" name="discount_amount" value="0.00" /> -->
+            <input type="hidden" name="no_shipping" value="1" />
+            <input type="hidden" name="no_note" value="1" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input type="hidden" name="lc" value="US" />
+            <input type="hidden" name="return" value="http://example.com" />         <!-- TODO: update -->
+            <input type="hidden" name="return_cancel" value="http://example.com" />  <!-- TODO: update -->
 
-			<!-- Hidden PayPal fields -->
-			<input type="hidden" name="cmd" value="_xclick" />
-			<input type="hidden" name="business" value="peboyles05@gmail.com" />
-			<input type="hidden" name="item_name" value="Food Site Cart" />
-			<!-- <input type="hidden" name="item_number" value="0" /> -->
-			<input type="hidden" name="amount" value="0.00" id="amount" />
-			<!-- <input type="hidden" name="discount_amount" value="0.00" /> -->
-			<input type="hidden" name="no_shipping" value="1" />
-			<input type="hidden" name="no_note" value="1" />
-			<input type="hidden" name="currency_code" value="USD" />
-			<input type="hidden" name="lc" value="US" />
-			<input type="hidden" name="return" value="http://example.com" />         <!-- TODO: update -->
-			<input type="hidden" name="return_cancel" value="http://example.com" />  <!-- TODO: update -->
-
-			<input type="submit" value="Checkout">
-		</form>
-	</main>
+            <input type="submit" value="Proceed to Payment">
+        </form>
+    </main>
 
     <footer id="footer">
-		TODO: add contact info
+		Have any questions, suggestions, or complaints?
+		 Feel free to reach out at: peboyles05@gmail.com or (571-243-9356)
 	</footer>
 </body>
 </html>

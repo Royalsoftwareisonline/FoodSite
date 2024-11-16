@@ -15,6 +15,15 @@ const show_dialog = item => {
 	dialog.querySelector("#add-to-cart").innerText = `Add To Cart - \$${item.price}`;
 
 	// show model
+	if (item.available === false) {
+		return; // Don't show dialog for unavailable items
+	}
+	
+	dialog.querySelector("h3").innerText = item.name;
+	dialog.querySelector("p").innerText = item.desc;
+	dialog.querySelector("img").src = item.img_src;
+	dialog.querySelector("#add-to-cart").innerText = `Add To Cart - \$${item.price}`;
+	
 	item_shown = item;
 	dialog.showModal();
 };
@@ -62,7 +71,7 @@ for (let section of catalog) {
 		item_ele.append(h3_ele);                          // <div> ... <h3>...</h3> </div>
 
 		let p_ele = document.createElement("p");          // <p> </p>
-		p_ele.innerText = item.desc;                      // <p>...</p>
+		//p_ele.innerText = item.desc;                      // <p>...</p>
 		item_ele.append(p_ele);                           // <div> ... <p>...</p> </div>
 
 		// TODO: display price

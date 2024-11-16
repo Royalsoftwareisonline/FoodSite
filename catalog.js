@@ -4,28 +4,30 @@ const catalog = [
 		id: "CuredMeats",  // programatic name used for #id
 		items: [
 			{
-				img_src: "placeholder.png",
+				img_src: "sold_out.jpg",
 				name: "Tasso Ham",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "Salty and smoky, tasso ham is as good on its own as it is in shrimp and grits or gumbo.",
+				price: 10.00,
+				available: false
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Pancetta",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "Cured and hung to dry for 2-3 weeks, pancetta is a great way to add a salty, meaty flavor to any dish (and is just as good as a snack!)",
+				price: 15.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Pastirma",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "Not to be confused with pastrami, pastirma is air-dried for about 2 weeks and coated with a mix of spices, giving it a unique flavor. ",
+				price: 15.00
 			},
 			{
-				img_src: "placeholder.png",
+				img_src: "sold_out.jpg",
 				name: "Butterscotch Bacon",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "Thick cut smoky bacon with a bit of sweetness from a butterscotch rub. Cured for 2 weeks.",
+				price: 10.00,
+				available: false
 			},
 		]
 	},
@@ -34,28 +36,32 @@ const catalog = [
 		id: "Sausages",
 		items: [
 			{
-				img_src: "placeholder.png",
+				img_src: "sold_out.jpg",
 				name: "Ghost Pepper Andouille",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "Made from scratch, roughly 2 links per pound",
+				price: 15.00,
+				available: false
 			},
 			{
-				img_src: "placeholder.png",
-				name: "Second Place BBQ Rib Sausage",
-				desc: "(TODO: description)",
-				price: 10_00
+				img_src: "sold_out.jpg",
+				name: "BBQ Rib Sausage",
+				desc: "Inspired by my grandfather's recipe for ribs (that placed him second in competitions), this sausage is simple and delicious. Roughly 2 links per pound.",
+				price: 15.00,
+				available: false
 			},
 			{
-				img_src: "placeholder.png",
-				name: "Salami Cotto",
-				desc: "(TODO: description)",
-				price: 10_00
+				img_src: "sold_out.jpg",
+				name: "Koch Salami",
+				desc: "A type of cooked salami, koch salami doesn't have the flavor of other salamis, but will ready to eat twice as fast. Links sold individually.",
+				price: 15.00,
+				available: false
 			},
 			{
-				img_src: "placeholder.png",
+				img_src: "sold_out.jpg",
 				name: "Teewurst",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "A German spreadable sausage, teewurst is great for things like our Artisan White Bread. Sold by the link. Links sold individually.",
+				price: 15.00,
+				available: false
 			},
 		]
 	},
@@ -65,27 +71,27 @@ const catalog = [
 		items: [
 			{
 				img_src: "placeholder.png",
-				name: "Artisan White Bread",
-				desc: "(TODO: description)",
-				price: 10_00
+				name: "Rustic White Bread",
+				desc: "A white bread that can be ordered plain or 'well done' for a bit of char like rustic European breads. Sold by the loaf.",
+				price: 10.00
 			},
 			{
 				img_src: "placeholder.png",
-				name: "Artisan Wheat Bread",
-				desc: "(TODO: description)",
-				price: 10_00
+				name: "Bacon Roti Canai",
+				desc: "Roti Canai is a Malaysian flatbread unique for having a crispy oustide and a soft and chewy inside. This version is filled with bacon. ",
+				price: 10.00
 			},
 			{
 				img_src: "placeholder.png",
-				name: "Extra Chewy Milk Bread",
-				desc: "(TODO: description)",
-				price: 10_00
+				name: "Chewy Butter Rolls",
+				desc: "These rolls stand out for their texture, which comes from glutinous rice flour, an ingredient used in mochi. Sold by the loaf.",
+				price: 10.00
 			},
 			{
 				img_src: "placeholder.png",
-				name: "Porcini and Parsley Focaccia",
-				desc: "(TODO: description)",
-				price: 10_00
+				name: "Focaccia",
+				desc: "An Italian flatbread sprinkled with a mix of salt, parsley, and porcini mushroom flakes. Sold by the loaf.",
+				price: 10.00
 			},
 		]
 	},
@@ -96,26 +102,27 @@ const catalog = [
 			{
 				img_src: "placeholder.png",
 				name: "Red Wine Ricotta",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "Made with red wine vinegar, this ricotta has a red color and distinct flavor.",
+				price: 8.00
 			},
 			{
-				img_src: "placeholder.png",
+				img_src: "sold_out.jpg",
 				name: "Smoked Paneer",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "A smoked cheese great that's great for grilling or frying due to the fact that it doesn't melt.",
+				price: 10.00,
+				available: false
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Marscopone",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "A creamy and spreadable cheese with a mild flavor, commonly used in cheesecakes or tiramisu.",
+				price: 10.00
 			},
 			{
 				img_src: "placeholder.png",
-				name: "Spice Rubbed Queso Blanco",
-				desc: "(TODO: description)",
-				price: 10_00
+				name: "Spiced Queso Fresco",
+				desc: "A mild white cheese with some added flavor from a mix of chiles and spices. Sold by the wheel.",
+				price: 10.00
 			},
 		]
 	},
@@ -125,27 +132,51 @@ const catalog = [
 		items: [
 			{
 				img_src: "placeholder.png",
-				name: "Rosemary Chili Oil",
-				desc: "(TODO: description)",
-				price: 10_00
+				name: "Classic Chili Oil",
+				desc: "A three pepper chili oil. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
+				price: 3.00
 			},
 			{
 				img_src: "placeholder.png",
-				name: "Classic Chili Oil",
-				desc: "(TODO: description)",
-				price: 10_00
+				name: "Rosemary Chili Oil",
+				desc: "The classic chili oil with a bit of rosemary flavor. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
+				price: 3.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Original Beef Jerky",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "A simple beef jerky with a meaty, tangy flavor. Sold by the bag.",
+				price: 5.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Spicy Beef Jerky",
-				desc: "(TODO: description)",
-				price: 10_00
+				desc: "A spicier beef jerky with the addition of the three pepper blend from our chili oils. Sold by the bag.",
+				price: 5.00
+			},
+		]
+	},
+	{
+		section_heading: "Weekly Specials",
+		id: "WeeklySpecials",
+		items: [
+			{
+				img_src: "placeholder.png",
+				name: "Pork Roll Monte Cristo",
+				desc: "A breakfast sandwich inspired twist on the pork roll egg and cheese, this sandwich has egg-dipped bread, caramelized pork roll, scrambled eggs, cheddar cheese and maple chili hot sauce. Will be prepared fresh.",
+				price: 8.00
+			},
+			{
+				img_src: "placeholder.png",
+				name: "Frito Pie",
+				desc: "Popular in the Southeast and Southwest, Frito pie is simply Fritos, chili, and cheese. Simple and delicious. Will be prepared fresh.",
+				price: 3.00
+			},
+			{
+				img_src: "placeholder.png",
+				name: "Spam Katsu-Sando",
+				desc: "A twist on a Japanese sandwich, the Spam Katsu-Sando has thinly cut, breaded and fried Spam, with roasted cabbage and tonkatsu sauce. Will be prepared fresh.",
+				price: 8.00
 			},
 		]
 	},
