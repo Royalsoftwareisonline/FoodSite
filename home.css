@@ -182,3 +182,71 @@ footer {
 .qty-btn:hover {
     background: #f0f0f0;
 }
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 24px;
+    }
+    
+    /* Main container layout */
+    #main-container {
+        flex-direction: column;
+    }
+    
+    /* Side menu adjustments */
+    #side-menu {
+        position: static;  /* Remove sticky positioning on mobile */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    #side-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: static;
+        font-size: 1em;
+    }
+    
+    #side-menu li {
+        margin: 0;
+    }
+    
+    /* Main content adjustments */
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* Items grid adjustments */
+    .items-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    /* Footer adjustments */
+    #footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .items-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    #side-menu ul {
+        font-size: 0.9em;
+    }
+}
