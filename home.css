@@ -201,23 +201,34 @@ footer {
     
     /* Side menu adjustments */
     #side-menu {
-        position: static;  /* Remove sticky positioning on mobile */
+        position: sticky;
+        top: 0;
         width: 100%;
-        margin-bottom: 20px;
+        background-color: rgba(118,110,85,255);
+        z-index: 1000; /* Ensure it stays above other content */
     }
     
     #side-menu ul {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Keep items on single line */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         padding: 10px;
-        position: static;
-        font-size: 1em;
+        position: relative;
+        gap: 15px;
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+        -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    }
+    
+    /* Hide scrollbar for Chrome/Safari */
+    #side-menu ul::-webkit-scrollbar {
+        display: none;
     }
     
     #side-menu li {
         margin: 0;
+        flex: 0 0 auto; /* Prevent items from shrinking */
     }
     
     /* Main content adjustments */
