@@ -163,7 +163,7 @@ const catalog = [
 			{
 				img_src: "placeholder.png",
 				name: "Pork Roll Monte Cristo",
-				desc: "A breakfast sandwich inspired twist on the pork roll egg and cheese, this sandwich has egg-dipped bread, caramelized pork roll, scrambled eggs, cheddar cheese and maple chili hot sauce. Will be prepared fresh.",
+				desc: "A breakfast sandwich inspired twist on the pork roll egg and cheese, this sandwich has egg-dipped bread, caramelized pork roll, tamagoyaki, cheddar cheese and maple chili hot sauce. Will be prepared fresh.",
 				price: 8.00
 			},
 			{
