@@ -229,7 +229,7 @@ footer {
     /* Items grid adjustments */
     .items-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 17px;
+        gap: 19px;
         padding: 10px;
     }
     
