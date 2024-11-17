@@ -103,20 +103,20 @@ const catalog = [
 				img_src: "placeholder.png",
 				name: "Red Wine Ricotta",
 				desc: "Made with red wine vinegar, this ricotta has a red color and distinct flavor.",
-				price: 5.00
+				price: 3.00
 			},
 			{
 				img_src: "sold_out.jpg",
 				name: "Smoked Paneer",
 				desc: "A smoked cheese great that's great for grilling or frying due to the fact that it doesn't melt.",
-				price: 8.00,
+				price: 5.00,
 				available: false
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Marscopone",
 				desc: "A creamy and spreadable cheese with a mild flavor, commonly used in cheesecakes or tiramisu.",
-				price: 8.00
+				price: 5.00
 			},
 			{
 				img_src: "placeholder.png",
