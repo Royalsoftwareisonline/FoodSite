@@ -185,47 +185,58 @@ footer {
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-    /* Main container - keep side by side layout */
-    #main-container {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
+    /* Header adjustments */
+    header {
         padding: 10px;
     }
     
-    /* Side menu - make it narrower */
+    header h1 {
+        font-size: 24px;
+    }
+    
+    /* Main container layout */
+    #main-container {
+        flex-direction: column;
+    }
+    
+    /* Side menu adjustments */
     #side-menu {
-        flex: 0 0 100px; /* Fixed width of 100px */
-        min-width: 100px;
+        position: static;  /* Remove sticky positioning on mobile */
+        width: 100%;
+        margin-bottom: 20px;
     }
     
     #side-menu ul {
-        position: sticky;
-        top: 5em;
-        padding: 8px;
-        background-color: rgb(75, 72, 72);
-        font-size: 0.9em;
-        width: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: static;
+        font-size: 1em;
     }
     
     #side-menu li {
-        margin: 8px 0;
-        white-space: normal; /* Allow text to wrap */
+        margin: 0;
     }
     
-    /* Main content area */
+    /* Main content adjustments */
     main {
-        flex: 1;
+        width: 100%;
         padding: 10px;
     }
     
-    /* Make items fit in remaining space */
-    .items {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
+    /* Items grid adjustments */
+    .items-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    /* Footer adjustments */
+    #footer {
+        padding: 15px;
+        font-size: 14px;
     }
 }
 
