@@ -201,7 +201,7 @@ footer {
     
     /* Side menu adjustments */
     #side-menu {
-        position: static;  /* Remove sticky positioning on mobile */
+        position: sticky;  /* Remove sticky positioning on mobile */
         width: 100%;
         margin-bottom: 20px;
     }
@@ -212,7 +212,7 @@ footer {
         justify-content: center;
         gap: 10px;
         padding: 10px;
-        position: static;
+        position: sticky;
         font-size: 1em;
     }
     
@@ -229,7 +229,7 @@ footer {
     /* Items grid adjustments */
     .items-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
+        gap: 17px;
         padding: 10px;
     }
     
