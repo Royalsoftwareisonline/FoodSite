@@ -187,51 +187,8 @@ footer {
 @media screen and (max-width: 768px) {
     /* Header */
     header {
-        position: sticky;  /* Changed from sticky to fixed */
+        position: sticky;
         top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        z-index: 1001;
-        background-color: white;
-    }
-    
-    /* Main container needs padding to account for fixed header */
-    #main-container {
-        padding-top: 60px;  /* Adjust based on your header height */
-    }
-    
-    /* Side menu adjustments */
-    #side-menu {
-        flex: 0 0 80px;
-    }
-    
-    #side-menu ul {
-        position: fixed;  /* Changed from sticky to fixed */
-        top: 60px;  /* Adjust based on your header height */
-        padding: 8px;
-        background-color: rgb(75, 72, 72);
-        font-size: 0.9em;
-        width: 80px;
-        z-index: 1000;
-        list-style: none;
-    }
-    
-    #side-menu li {
-        margin: 15px 0;
-        white-space: normal;
-        text-align: center;
-        padding: 5px 0;
-    }
-    
-    /* Main container layout */
-    #main-container {
-        flex-direction: column;
-    }
-    
-    /* Side menu adjustments */
-    #side-menu {
-        position: static;  /* Remove sticky positioning on mobile */
         width: 100%;
         z-index: 1001;
         padding: 15px;
@@ -258,6 +215,17 @@ footer {
         margin: 8px 0;
         white-space: normal;
         text-align: center;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .items-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    #side-menu ul {
+        font-size: 0.9em;
     }
 }
 
