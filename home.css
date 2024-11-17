@@ -187,71 +187,37 @@ footer {
 @media screen and (max-width: 768px) {
      /* Header adjustments */
      /* header {
-        padding: 10px; */
-    /* Header */
-    header {
-        position: sticky;  /* Changed from fixed */
-        top: 0;
-        width: 100%;
-        z-index: 1001;
-        background-color: white;
-        margin: 0;
+          padding: 10px;
     }
     
-   /* header h1 {
+    header h1 {
         font-size: 24px;
     }
     
-    /* Main container layout */ 
-    /* Main container */
+    /* Main container layout */
     #main-container {
-        /* flex-direction: column; */
-        margin-top: 0;  /* Remove top padding since we're using sticky */
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
     
     /* Side menu adjustments */
     #side-menu {
-        /*position: sticky;  /* Remove sticky positioning on mobile */
-        /*width: 100%;
-        margin-bottom: 20px;*/
-        flex: 0 0 80px;
+        position: static;  /* Remove sticky positioning on mobile */
+        width: 100%;
+        margin-bottom: 20px;
     }
     
     #side-menu ul {
-        /* display: flex;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
-        padding: 13px;
-        position: sticky;
-        font-size: 1em; */
-        position: sticky;  /* Changed from fixed */
-        top: 60px;  /* Distance from top after header */
-        padding: 8px;
-        background-color: rgb(75, 72, 72);
-        font-size: 0.9em;
-        width: 80px;
-        z-index: 1000;
-        list-style-type: none;
+        gap: 10px;
+        padding: 10px;
+        position: static;
+        font-size: 1em;
     }
     
     #side-menu li {
-        /*margin: 0;*/
-        margin: 25px 0;
-        white-space: normal;
-        text-align: center;
-        padding: 8px 0;
-        list-style: none;
-        list-style-type: none;
-    }
-    
-    /* Add extra space after specific menu items */
-    #side-menu li:nth-child(1),
-    #side-menu li:nth-child(2),
-    #side-menu li:nth-child(3) {
-        margin-bottom: 35px;
+        margin: 0;
     }
     
     /* Main content adjustments */
@@ -263,8 +229,8 @@ footer {
     /* Items grid adjustments */
     .items-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 19px;
-        padding: 12px;
+        gap: 15px;
+        padding: 10px;
     }
     
     /* Footer adjustments */
@@ -281,7 +247,18 @@ footer {
     }
     
     #side-menu ul {
-        font-size: 1em;
+        font-size: 0.9em;
+    }
+}
+
+    /* For very small screens */
+@media screen and (max-width: 480px) {
+    .items-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    #side-menu ul {
+        font-size: 0.9em;
     }
 }
 
@@ -292,17 +269,6 @@ footer {
     }
     
     #side-menu ul {
-        font-size: 1em;
-    }
-}
-
-/* For very small screens */
-@media screen and (max-width: 480px) {
-    .items-container {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-    
-    #side-menu ul {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 }
