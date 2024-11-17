@@ -185,58 +185,36 @@ footer {
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-    /* Header adjustments */
+    /* Header */
     header {
-        padding: 10px;
-    }
-    
-    header h1 {
-        font-size: 24px;
-    }
-    
-    /* Main container layout */
-    #main-container {
-        flex-direction: column;
-    }
-    
-    /* Side menu adjustments */
-    #side-menu {
-        position: static;  /* Remove sticky positioning on mobile */
+        position: sticky;
+        top: 0;
         width: 100%;
-        margin-bottom: 20px;
+        z-index: 1001;
+        padding: 15px;
+        margin: 0;
+        background-color: white;
+    }
+    
+    /* Side menu adjustments only */
+    #side-menu {
+        flex: 0 0 80px;
     }
     
     #side-menu ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        padding: 10px;
-        position: static;
-        font-size: 1em;
+        position: sticky;
+        top: 70px;
+        padding: 8px;
+        background-color: rgb(75, 72, 72);
+        font-size: 0.9em;
+        width: 80px;
+        z-index: 1000;
     }
     
     #side-menu li {
-        margin: 0;
-    }
-    
-    /* Main content adjustments */
-    main {
-        width: 100%;
-        padding: 10px;
-    }
-    
-    /* Items grid adjustments */
-    .items-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
-        padding: 10px;
-    }
-    
-    /* Footer adjustments */
-    #footer {
-        padding: 15px;
-        font-size: 14px;
+        margin: 8px 0;
+        white-space: normal;
+        text-align: center;
     }
 }
 
@@ -248,18 +226,5 @@ footer {
     
     #side-menu ul {
         font-size: 0.9em;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* Header */
-    header {
-        position: sticky;
-        top: 0;
-        width: 100%;
-        z-index: 1001;
-        padding: 15px;
-        margin: 0;
-        background-color: white;
     }
 }
