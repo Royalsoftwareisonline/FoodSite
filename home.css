@@ -185,61 +185,47 @@ footer {
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-    /* Header */
-    header {
-        position: sticky;
-        top: 0;
-        z-index: 1001;
-        padding: 15px;
-        margin: 0;
-        border-bottom: none;
-        background-color: white;
-    }
-    
-    /* Main container */
+    /* Main container - keep side by side layout */
     #main-container {
         display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-        gap: 0;  /* Remove any gap */
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
     }
     
-    /* Side menu */
+    /* Side menu - make it narrower */
     #side-menu {
-        position: sticky;
-        top: 54px;  /* Adjust this value to match your header height */
-        width: 100%;
-        background-color: rgba(118,110,85,255);
-        z-index: 1000;
-        margin: 0;
-        padding: 0;
+        flex: 0 0 100px; /* Fixed width of 100px */
+        min-width: 100px;
     }
     
     #side-menu ul {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        padding: 12px 15px;
-        position: relative;
-        gap: 20px;
-        margin: 0;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        list-style: none;
+        position: sticky;
+        top: 5em;
+        padding: 8px;
+        background-color: rgb(75, 72, 72);
+        font-size: 0.9em;
+        width: 100px;
     }
     
-    /* Main content */
+    #side-menu li {
+        margin: 8px 0;
+        white-space: normal; /* Allow text to wrap */
+    }
+    
+    /* Main content area */
     main {
-        margin-top: 0;  /* Remove top margin */
-        padding-top: 15px;
+        flex: 1;
+        padding: 10px;
     }
     
-    /* Category headers */
-    main h2:first-child {
-        margin-top: 15px;  /* Add some space after the menu */
+    /* Make items fit in remaining space */
+    .items {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
     }
 }
 
