@@ -273,3 +273,14 @@ footer {
         font-size: 0.9em;
     }
 }
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .items-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    #side-menu ul {
+        font-size: 0.9em;
+    }
+}
