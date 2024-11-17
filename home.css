@@ -239,3 +239,16 @@ footer {
         font-size: 0.9em;
     }
 }
+
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1001;
+        padding: 15px;
+        margin: 0;
+        background-color: white;
+    }
+}
