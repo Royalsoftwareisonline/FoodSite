@@ -185,13 +185,43 @@ footer {
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-    /* Header adjustments */
+    /* Header */
     header {
-        padding: 10px;
+        position: sticky;  /* Changed from sticky to fixed */
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1001;
+        background-color: white;
     }
     
-    header h1 {
-        font-size: 24px;
+    /* Main container needs padding to account for fixed header */
+    #main-container {
+        padding-top: 60px;  /* Adjust based on your header height */
+    }
+    
+    /* Side menu adjustments */
+    #side-menu {
+        flex: 0 0 80px;
+    }
+    
+    #side-menu ul {
+        position: fixed;  /* Changed from sticky to fixed */
+        top: 60px;  /* Adjust based on your header height */
+        padding: 8px;
+        background-color: rgb(75, 72, 72);
+        font-size: 0.9em;
+        width: 80px;
+        z-index: 1000;
+        list-style: none;
+    }
+    
+    #side-menu li {
+        margin: 15px 0;
+        white-space: normal;
+        text-align: center;
+        padding: 5px 0;
     }
     
     /* Main container layout */
