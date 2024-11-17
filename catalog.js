@@ -14,13 +14,13 @@ const catalog = [
 				img_src: "placeholder.png",
 				name: "Pancetta",
 				desc: "Cured and hung to dry for 2-3 weeks, pancetta is a great way to add a salty, meaty flavor to any dish (and is just as good as a snack!)",
-				price: 12.00
+				price: 15.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Pastirma",
 				desc: "Not to be confused with pastrami, pastirma is air-dried for about 2 weeks and coated with a mix of spices, giving it a unique flavor. ",
-				price: 12.00
+				price: 15.00
 			},
 			{
 				img_src: "sold_out.jpg",
