@@ -191,6 +191,45 @@ footer {
         top: 0;
         width: 100%;
         z-index: 1001;
+        background-color: white;
+    }
+    
+    /* Side menu adjustments */
+    #side-menu {
+        flex: 0 0 80px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+    
+    #side-menu ul {
+        position: sticky;
+        top: 70px;
+        padding: 8px;
+        background-color: rgb(75, 72, 72);
+        font-size: 0.9em;
+        width: 80px;
+        z-index: 1000;
+        list-style: none; /* Remove bullet points */
+    }
+    
+    #side-menu li {
+        margin: 15px 0; /* Increased spacing between items */
+        white-space: normal;
+        text-align: center;
+        padding: 5px 0;
+    }
+    
+    /* Main container layout */
+    #main-container {
+        flex-direction: column;
+    }
+    
+    /* Side menu adjustments */
+    #side-menu {
+        position: static;  /* Remove sticky positioning on mobile */
+        width: 100%;
+        z-index: 1001;
         padding: 15px;
         margin: 0;
         background-color: white;
