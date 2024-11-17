@@ -14,13 +14,13 @@ const catalog = [
 				img_src: "placeholder.png",
 				name: "Pancetta",
 				desc: "Cured and hung to dry for 2-3 weeks, pancetta is a great way to add a salty, meaty flavor to any dish (and is just as good as a snack!)",
-				price: 15.00
+				price: 12.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Pastirma",
 				desc: "Not to be confused with pastrami, pastirma is air-dried for about 2 weeks and coated with a mix of spices, giving it a unique flavor. ",
-				price: 15.00
+				price: 12.00
 			},
 			{
 				img_src: "sold_out.jpg",
@@ -39,14 +39,14 @@ const catalog = [
 				img_src: "sold_out.jpg",
 				name: "Ghost Pepper Andouille",
 				desc: "Made from scratch, roughly 2 links per pound",
-				price: 15.00,
+				price: 10.00,
 				available: false
 			},
 			{
 				img_src: "sold_out.jpg",
 				name: "BBQ Rib Sausage",
 				desc: "Inspired by my grandfather's recipe for ribs (that placed him second in competitions), this sausage is simple and delicious. Roughly 2 links per pound.",
-				price: 15.00,
+				price: 10.00,
 				available: false
 			},
 			{
@@ -73,25 +73,25 @@ const catalog = [
 				img_src: "placeholder.png",
 				name: "Rustic White Bread",
 				desc: "A white bread that can be ordered plain or 'well done' for a bit of char like rustic European breads. Sold by the loaf.",
-				price: 10.00
+				price: 8.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Bacon Roti Canai",
 				desc: "Roti Canai is a Malaysian flatbread unique for having a crispy oustide and a soft and chewy inside. This version is filled with bacon. ",
-				price: 10.00
+				price: 8.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Chewy Butter Rolls",
 				desc: "These rolls stand out for their texture, which comes from glutinous rice flour, an ingredient used in mochi. Sold by the loaf.",
-				price: 10.00
+				price: 8.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Focaccia",
 				desc: "An Italian flatbread sprinkled with a mix of salt, parsley, and porcini mushroom flakes. Sold by the loaf.",
-				price: 10.00
+				price: 8.00
 			},
 		]
 	},
@@ -103,26 +103,26 @@ const catalog = [
 				img_src: "placeholder.png",
 				name: "Red Wine Ricotta",
 				desc: "Made with red wine vinegar, this ricotta has a red color and distinct flavor.",
-				price: 8.00
+				price: 5.00
 			},
 			{
 				img_src: "sold_out.jpg",
 				name: "Smoked Paneer",
 				desc: "A smoked cheese great that's great for grilling or frying due to the fact that it doesn't melt.",
-				price: 10.00,
+				price: 8.00,
 				available: false
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Marscopone",
 				desc: "A creamy and spreadable cheese with a mild flavor, commonly used in cheesecakes or tiramisu.",
-				price: 10.00
+				price: 8.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Spiced Queso Fresco",
 				desc: "A mild white cheese with some added flavor from a mix of chiles and spices. Sold by the wheel.",
-				price: 10.00
+				price: 8.00
 			},
 		]
 	},
@@ -134,13 +134,13 @@ const catalog = [
 				img_src: "placeholder.png",
 				name: "Classic Chili Oil",
 				desc: "A three pepper chili oil. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
-				price: 3.00
+				price: 5.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Rosemary Chili Oil",
 				desc: "The classic chili oil with a bit of rosemary flavor. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
-				price: 3.00
+				price: 5.00
 			},
 			{
 				img_src: "placeholder.png",
