@@ -210,8 +210,8 @@ footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
-        padding: 10px;
+        gap: 12px;
+        padding: 12px;
         position: sticky;
         font-size: 1em;
     }
@@ -247,7 +247,7 @@ footer {
     }
     
     #side-menu ul {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
 
@@ -258,7 +258,7 @@ footer {
     }
     
     #side-menu ul {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
 
@@ -269,6 +269,6 @@ footer {
     }
     
     #side-menu ul {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
