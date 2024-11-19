@@ -7,7 +7,7 @@ const catalog = [
 				img_src: "sold_out.jpg",
 				name: "Tasso Ham",
 				desc: "Salty and smoky, tasso ham is as good on its own as it is in shrimp and grits or gumbo.",
-				price: 10.00,
+				price: 8.00,
 				available: false
 			},
 			{
@@ -39,28 +39,28 @@ const catalog = [
 				img_src: "sold_out.jpg",
 				name: "Ghost Pepper Andouille",
 				desc: "Made from scratch, roughly 2 links per pound",
-				price: 10.00,
+				price: 8.00,
 				available: false
 			},
 			{
 				img_src: "sold_out.jpg",
 				name: "BBQ Rib Sausage",
 				desc: "Inspired by my grandfather's recipe for ribs (that placed him second in competitions), this sausage is simple and delicious. Roughly 2 links per pound.",
-				price: 10.00,
+				price: 8.00,
 				available: false
 			},
 			{
 				img_src: "sold_out.jpg",
 				name: "Koch Salami",
 				desc: "A type of cooked salami, koch salami doesn't have the flavor of other salamis, but will ready to eat twice as fast. Links sold individually.",
-				price: 15.00,
+				price: 10.00,
 				available: false
 			},
 			{
 				img_src: "sold_out.jpg",
 				name: "Teewurst",
 				desc: "A German spreadable sausage, teewurst is great for things like our Artisan White Bread. Sold by the link. Links sold individually.",
-				price: 15.00,
+				price: 10.00,
 				available: false
 			},
 		]
@@ -73,25 +73,25 @@ const catalog = [
 				img_src: "placeholder.png",
 				name: "Rustic White Bread",
 				desc: "A white bread that can be ordered plain or 'well done' for a bit of char like rustic European breads. Sold by the loaf.",
-				price: 8.00
+				price: 7.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Bacon Roti Canai",
 				desc: "Roti Canai is a Malaysian flatbread unique for having a crispy oustide and a soft and chewy inside. This version is filled with bacon. ",
-				price: 8.00
+				price: 4.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Chewy Butter Rolls",
 				desc: "These rolls stand out for their texture, which comes from glutinous rice flour, an ingredient used in mochi. Sold by the loaf.",
-				price: 8.00
+				price: 4.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Focaccia",
 				desc: "An Italian flatbread sprinkled with a mix of salt, parsley, and porcini mushroom flakes. Sold by the loaf.",
-				price: 8.00
+				price: 4.00
 			},
 		]
 	},
@@ -134,25 +134,25 @@ const catalog = [
 				img_src: "placeholder.png",
 				name: "Classic Chili Oil",
 				desc: "A three pepper chili oil. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
-				price: 5.00
+				price: 4.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Rosemary Chili Oil",
 				desc: "The classic chili oil with a bit of rosemary flavor. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
-				price: 5.00
+				price: 4.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Original Beef Jerky",
 				desc: "A simple beef jerky with a meaty, tangy flavor. Sold by the bag.",
-				price: 5.00
+				price: 2.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Spicy Beef Jerky",
 				desc: "A spicier beef jerky with the addition of the three pepper blend from our chili oils. Sold by the bag.",
-				price: 5.00
+				price: 2.00
 			},
 		]
 	},
