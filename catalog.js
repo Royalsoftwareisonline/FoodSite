@@ -156,7 +156,7 @@ const catalog = [
 			},
 		]
 	},
-	{
+	/*{
 		section_heading: "Weekly Specials",
 		id: "WeeklySpecials",
 		items: [
@@ -179,7 +179,7 @@ const catalog = [
 				price: 12.00
 			},
 		]
-	},
+	},*/
 ];
 
 const _catalog_lookup = {};
