@@ -134,24 +134,24 @@ const catalog = [
 				img_src: "placeholder.png",
 				name: "Classic Chili Oil",
 				desc: "A three pepper chili oil. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
-				price: 4.00
+				price: 5.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Rosemary Chili Oil",
 				desc: "The classic chili oil with a bit of rosemary flavor. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
-				price: 4.00
+				price: 5.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Original Beef Jerky",
-				desc: "A simple beef jerky with a meaty, tangy flavor. Sold by the bag.",
+				desc: "A simple beef jerky with a meaty, tangy flavor. Sold by the bag (8 ounces of jerky per bag)",
 				price: 2.00
 			},
 			{
 				img_src: "placeholder.png",
 				name: "Spicy Beef Jerky",
-				desc: "A spicier beef jerky with the addition of the three pepper blend from our chili oils. Sold by the bag.",
+				desc: "A spicier beef jerky with the addition of the three pepper blend from our chili oils. Sold by the bag (8 ounces of jerky per bag).",
 				price: 2.00
 			},
 		]
