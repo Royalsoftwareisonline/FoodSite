@@ -38,7 +38,7 @@ const catalog = [
 			{
 				img_src: "sold_out.jpg",
 				name: "Ghost Pepper Andouille",
-				desc: "Made from scratch, roughly 2 links per pound",
+				desc: "Andouille sausage with a kick. Roughly 2 links per pound",
 				price: 8.00,
 				available: false
 			},
@@ -70,27 +70,27 @@ const catalog = [
 		id: "BakedGoods",
 		items: [
 			{
-				img_src: "placeholder.png",
+				img_src: "Boules.jpg",
 				name: "Rustic White Bread",
 				desc: "A white bread that can be ordered plain or 'well done' for a bit of char like rustic European breads. Sold by the loaf.",
 				price: 7.00
 			},
 			{
-				img_src: "placeholder.png",
+				img_src: "RC.jpg",
 				name: "Bacon Roti Canai",
-				desc: "Roti Canai is a Malaysian flatbread unique for having a crispy oustide and a soft and chewy inside. This version is filled with bacon. ",
+				desc: "Roti Canai is a Malaysian flatbread unique for having a crispy oustide and a chewy inside. This version is filled with bacon for some smoky flavor and extra crispiness. Two flatbreads per order",
 				price: 4.00
 			},
 			{
-				img_src: "placeholder.png",
+				img_src: "Rolls.jpg",
 				name: "Chewy Butter Rolls",
 				desc: "These rolls stand out for their texture, which comes from glutinous rice flour, an ingredient used in mochi. Sold by the loaf.",
 				price: 4.00
 			},
 			{
-				img_src: "placeholder.png",
+				img_src: "FC.jpg",
 				name: "Focaccia",
-				desc: "An Italian flatbread sprinkled with a mix of salt, parsley, and porcini mushroom flakes. Sold by the loaf.",
+				desc: "This Italian flatbread has a great flavor with hints of butter and alcohol from being pre-fermented for 12 hours. It's then sprinkled with a mix of salt, parsley, and porcini mushroom flakes. Three strips of bread per order.",
 				price: 4.00
 			},
 		]
@@ -132,28 +132,28 @@ const catalog = [
 		items: [
 			{
 				img_src: "placeholder.png",
-				name: "Classic Chili Oil",
-				desc: "A three pepper chili oil. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
+				name: "Rosemary chili Oil",
+				desc: "A three pepper chili oil with a bit of rosemary flavor. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
 				price: 5.00
 			},
-			{
+			/*{
 				img_src: "placeholder.png",
 				name: "Rosemary Chili Oil",
 				desc: "The classic chili oil with a bit of rosemary flavor. Can be ordered mild, medium, or hot (hot is not for reccommended for those with low spice tolerance). Sold by the bottle.",
 				price: 5.00
-			},
+			},*/
 			{
-				img_src: "placeholder.png",
-				name: "Original Beef Jerky",
-				desc: "A simple beef jerky with a meaty, tangy flavor. Sold by the bag (8 ounces of jerky per bag)",
+				img_src: "BJ.jpg",
+				name: "Beef Jerky",
+				desc: "A beef jerky with a flavor based on my grandfather's steak marinade (can also be ordered spicy). Sold by the bag (1/4 pound of jerky per bag. Three times more than Jack Link's for a third of the price!)",
 				price: 2.00
 			},
-			{
+			/*{
 				img_src: "placeholder.png",
 				name: "Spicy Beef Jerky",
 				desc: "A spicier beef jerky with the addition of the three pepper blend from our chili oils. Sold by the bag (8 ounces of jerky per bag).",
 				price: 2.00
-			},
+			},*/
 		]
 	},
 	/*{
